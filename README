@@ -1,0 +1,39 @@
+== Arbori binari de cautare ==
+Am declarat structura pentru fisier, respectiv pentru director.
+Am folosit o functie care initializeaza directorul cu root,
+pe care am folosit-o in main la inceput.
+Functia de cautarePWD e folosita pentru a-mi ajunge in mod
+recursiv la director radacina, ca mai apoi sa afiseze in ordinea
+corecta parintii directorului dat in antet.
+Functia de cautareDir imi cauta directorul cu numele "nume" in
+directorul radacina, auxiliarul imi salveaza de fiecare data
+directorul de intrare, parinte, iar contorul e folosit pentru
+a scrie mai putin cod si a nu duplica functia de cautare(uneori 
+trebuie sa-mi afiseze un mesaj alteori doar trebuie sa-mi dea 
+return).
+CautareFile face acelasi lucru doar ca pentru fisiere.
+Touch imi creeaza un fisier cu nume "nume", citit de la tastatura.
+Daca exista deja un fisier sau un director cu numele functia de
+cautare imi intoarce un mesaj, dar daca nu se introduce dupa caz:
+ori la inceput, daca nu exista, ori pe latura stanga sau dreapta 
+in functie de nume. Se introduce toata structura.
+La fel este si pentru mkdir, functie ce insereaza un director.
+La touch eu am intrat cu pointer-ul de la files, iar la mkdir cu 
+cel de la directories.
+Afisarile le-am facut pe rand, parcurgand directorii sau fisierele,
+iar recursivitatea am apelat-o astfel incat sa mi le asiseze in ordine.
+Doua functii auxiliare au fost cele de cautare valoare minima atat
+la fisiere, cat si la directoare. Valoarea minima este cea care 
+inlocuieste elementul sters.
+Rm este cea care imi sterge un fisier cu numele specificat.
+Intru cu pointer-ul de la files.
+Rmdir imi sterge un director.
+Functia de cd imi schimba calea catre directorul cu numele "nume"
+citit de la tastatura. Am luat cazurile in care trebuie sa ma duc 
+doar un director inapoi sau trebuie sa il gasesc si apoi sa il schimb.
+Pwd imi apeleaza functia de cautarePWD recursiva.
+In main imi initializez directorul, imi citesc comenziile, si daca
+e cazul si numele unui director/fisier. Ceea ce e mai special in main:
+ la ls am luat 4 cazuri ca sa nu mi afisezein plus; la rm am
+mai verificat daca exista fiserul cu functia de cautareFile, 
+la fel si la rmdir, pentru ca nu aveam ce sa sterg.
