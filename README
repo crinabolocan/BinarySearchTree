@@ -1,4 +1,5 @@
 == Arbori binari de cautare ==
+
 Am declarat structura pentru fisier, respectiv pentru director.
 Am folosit o functie care initializeaza directorul cu root,
 pe care am folosit-o in main la inceput.
